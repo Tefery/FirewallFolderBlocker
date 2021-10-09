@@ -21,7 +21,15 @@ public class Main {
 //            System.out.println("Se necesitan permisos de administrador...");
 //        }
 
-        if (args.length < 2) {
+        if (args.length < 2 || Arrays.stream(args).anyMatch(x -> x.equalsIgnoreCase("/H") || x.equalsIgnoreCase("/HELP"))) {
+            System.out.println("Instrucciones:");
+            System.out.println("java -jar FirewallFolderBlocker.jar (PathFolder) (RuleName) [/R] [/IO | /OO]");
+            System.out.println("/R    -> Recursive search");
+            System.out.println("/IO   -> Input only");
+            System.out.println("/IO   -> Output only");
+            System.out.println("/H    -> Help text");
+            System.out.println("/HELP -> Help text");
+            System.out.println("Ejemplo: java -jar FirewallFolderBlocker.jar \"C:\\BadGames\\LeagueOfLegends\" \"Give me back my life\" /R /OO");
             return;
         }
 
