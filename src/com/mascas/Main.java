@@ -29,11 +29,11 @@ public class Main {
             System.out.println("/IO   -> Output only");
             System.out.println("/H    -> Help text");
             System.out.println("/HELP -> Help text");
-            System.out.println("Ejemplo: java -jar FirewallFolderBlocker.jar \"C:\\BadGames\\LeagueOfLegends\" \"Give me back my life\" /R /OO");
+            System.out.println("\nEjemplo: java -jar FirewallFolderBlocker.jar \"C:\\BadGames\\LeagueOfLegends\" \"Give me back my life\" /R /OO");
             return;
         }
 
-        String rutaInicial = args[0];
+        final String rutaInicial = args[0];
         tamanioRutaInicial = rutaInicial.length() + 1;
         nombreRegla = args[1];
 
@@ -65,11 +65,14 @@ public class Main {
             return;
         }
 
-        FileWriter writer = new FileWriter(rutaInicial + "\\" + nombreRegla + "FirewallBlocker.cmd");
+        final String cmdPath = rutaInicial + "\\" + nombreRegla + "FirewallBlocker.cmd";
+        FileWriter writer = new FileWriter(cmdPath);
         for(String str: commands) {
             writer.write(str + System.lineSeparator());
         }
         writer.close();
+
+        System.out.println("Generado " + cmdPath);
 
         //Runtime.getRuntime().exec(commands);
     }
@@ -92,7 +95,7 @@ public class Main {
 
         return sentencias;
     }
-
+/*
     private static boolean isAdmin() {
         String[] groups = (new com.sun.security.auth.module.NTSystem()).getGroupIDs();
         for (String group : groups) {
@@ -101,5 +104,5 @@ public class Main {
         }
         return false;
     }
-
+*/
 }
