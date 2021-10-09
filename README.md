@@ -19,7 +19,7 @@ El programa genera un archivo CMD con las instrucciones para bloquear todos los 
 
 > java -jar FirewallFolderBlocker.jar "C:\BadGames\LeagueOfLegends" "Give me back my life" /R /OO
 
-Se compila con la [JDK14](https://jdk.java.net/archive/) o superior y se le envia como argumento el archivo ***.reg***. Yo recomiendo usar la [JDK17](https://jdk.java.net/17/).
+Se compila con la [JDK14](https://jdk.java.net/archive/) o superior pero yo recomiendo usar la [JDK17](https://jdk.java.net/17/).
 
 ## Contributing
 Cualquier cambio a mejor es bienvenido, soy consciente de que la aplicación es fea y cutre, pero hace lo que se le pide.
