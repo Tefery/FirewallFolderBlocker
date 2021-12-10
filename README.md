@@ -11,7 +11,7 @@ El programa genera un archivo CMD con las instrucciones para bloquear todos los 
     java -jar FirewallFolderBlocker.jar (PathFolder) (RuleName) [/R] [/IO | /OO]
     /R    -> Recursive search
     /IO   -> Input only
-    /IO   -> Output only
+    /OO   -> Output only
     /H    -> Help text
     /HELP -> Help text
 
